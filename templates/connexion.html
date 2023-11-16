@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Connexion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Inter:wght@300;700&family=Poppins:wght@300&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="topbar"><a href="/">acceuil</a></div>
+
+    <div class="titre">
+        <h1>Connexion</h1>
+        <p>Pas inscrit ? <a href="{{ url_for('sign') }}">Inscrivez-vous ici</a></p>    
+    </div>
+
+    <div class="form">
+        <img src="/static/asset/logo.avif" alt="" width="500" height="550">
+        <form id="registrationForm" action="/login" method="post">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Connexion</button>
+        </form>
+    </div>
+
+</body>
+</html>

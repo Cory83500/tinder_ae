@@ -1,0 +1,73 @@
+body {
+    font-family: Agbalumo, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.titre {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Augmenter la largeur du formulaire */
+    margin: 0 auto; /* Centrer le formulaire */
+}
+
+.form {
+    display: flex;
+    align-items: flex-start; /* Aligner les éléments en haut */
+    justify-content: space-around;
+    flex-direction: row; /* Aligner les éléments en ligne */
+    flex-wrap: wrap; /* Permettre aux éléments de passer à la ligne */
+}
+
+.form-column {
+    flex: 1; /* Utiliser toute la largeur disponible */
+    max-width: 400px; /* Limiter la largeur pour éviter qu'il ne devienne trop large */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    resize: none;
+}
+
+button {
+    background-color: #4163EF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.topbar {
+    background-color: #4163EF;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.second_row {
+    display: flex;
+    flex-wrap: wrap; /* Permettre aux éléments de passer à la ligne */
+    justify-content: space-between;
+}

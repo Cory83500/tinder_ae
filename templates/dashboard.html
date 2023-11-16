@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Inter:wght@300;700&family=Poppins:wght@300&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="topbar"><a href="/">acceuil</a></div>
+    <div class="top-bar">
+        <h1>Mon Tableau de Bord</h1>
+        <a href="/">Se déconnecter</a>
+    </div>
+
+    <div class="dashboard-container">
+
+        <!-- Vérifiez que user_profile n'est pas vide -->
+        {% if user_profile %}
+            <div class="card col-md-4 mb-4">
+                <img src="{{ user_profile.get('photo', 'default_profile_image.jpg') }}" class="card-img-top" alt="Profile Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ user_profile.get('name', 'Nom Inconnu') }}</h5>
+                    <p class="card-text">Email: {{ user_profile.get('email', 'Email Inconnu') }}</p>
+                    <p class="card-text">Téléphone: {{ user_profile.get('phone', 'Téléphone Inconnu') }}</p>
+                    <p class="card-text">Date de naissance: {{ user_profile.get('dob', 'Date de naissance Inconnue') }}</p>
+                    <p class="card-text">Catégorie: {{ user_profile.get('category', 'Catégorie Inconnue') }}</p>
+                    <p class="card-text">Description: {{ user_profile.get('description', 'Description Inconnue') }}</p>
+                    <p class="card-text">Diplômes: {{ user_profile.get('diplomes', 'Diplômes Inconnus') }}</p>
+                    <p class="card-text">Pretention salariale: {{ user_profile.get('pretention', 'Pretention Inconnue') }}</p>
+                    <p class="card-text">Logement: {{ user_profile.get('logement', 'Logement Inconnu') }}</p>
+                    <p class="card-text">Région: {{ user_profile.get('region', 'Région Inconnue') }}</p>
+                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
